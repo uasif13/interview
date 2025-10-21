@@ -1,0 +1,33 @@
+dts:2024.06.01+1000000?90
+tms:1000000?24:00
+syms:1000000?`aapl`goog`nvda`meta`tsla
+vols:10*1+1000000?1000
+pxs:90.0+(1000000?2001)%100
+trades:([] date:dts;time:tms;sym:syms;size:vols;price:pxs)
+trades:update price:3*price from trades where sym=`aapl
+trades:update price:3*price from trades where sym=`goog
+trades:update price:2*price from trades where sym=`nvda
+trades:update price:7*price from trades where sym=`meta
+trades:update price:4*price from trades where sym=`tsla
+mktrades:{[tickers;sz] 
+    date:2024.06.01+sz?90; 
+    time:sz?24:00; 
+    sym:sz?tickers;size:10*1+sz?1000;
+    price:90.0+(sz?2001)%100; 
+    t:([] date; time; sym; size; price); 
+    t:`date`time xasc t; 
+    t:update price:3*price from t where sym=`goog; 
+    t:update price: 3*price from t where sym=`aapl;
+    t:update price: 2*price from t where sym=`nvda;
+    t:update price:7*price from t where sym=`meta; 
+    t:update price:4*price from t where sym=`tsla;t}
+trades:mktrades[`aapl`goog`nvda`meta`tsla;1000000]
+mkorders: ([size];
+	  trader:size?`ta`tb`tc`td`te;
+	clientname:size?`ca`cb`cc`cd`ce;
+	order_type:size?("queued";"processing";"executed";
+	t: ([] trader;clientname;order_type);t)
+)
+orders:mkorders[1000000]
+
+

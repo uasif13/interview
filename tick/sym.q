@@ -1,0 +1,7 @@
+/trades:([] time:`timespan$(); sym:`symbol$(); date:`date$(); price:`float$();  size:`long$())
+alerts:([] time:`timespan$(); sym:`symbol$(); size:`long$(); variance:`float$(); threshold:`float$())
+orders:([] time:`timespan$(); sym:`symbol$(); trader:`symbol$(); clientname:`symbol$(); order_type:())
+/quotes:([] time:`timespan$(); sym:`symbol$(); company:`symbol$(); size:`long$())
+data:([] time:`timespan$(); sym:`symbol$();school:`symbol$(); team:`symbol$(); sports:`symbol$(); score:`int$())
+quote:([]time:`timespan$(); sym:`g#`symbol$();company: `symbol$();bid:`float$(); ask:`float$();bsize:`int$();asize:`int$())
+trade:([]time:`timespan$();sym:`g#`symbol$(); date: `date$();price:`float$(); size:`int$())
