@@ -16,7 +16,7 @@ upd:insert;
     0N!@[;`sym;`g#] each t;};
 
 / init schema and sync up from log file;cd to hdb(so client save can run)
-.u.rep:{(.[;();:;].)each x;if[null first y;:()];0N!-11!y;system "cd /home/asifuddin/interview/",1_-10_string first reverse y};
+.u.rep:{(.[;();:;].)each x;if[null first y;:()];0N!-11!y;system "cd /home/asifuddin/",1_-10_string first reverse y};
 / HARDCODE \cd if other than logdir/db
 
 / connect to ticker plant for (schema;(logcount;log))

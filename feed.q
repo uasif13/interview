@@ -14,12 +14,12 @@ getask:{[s] prices[s]+getmovement[s]} /generate ask price
 /timer function
 .z.ts:{
   s:n?syms;
-  h(".u.upd";`quote;(n#.z.N;s;n?`AA`BB`CC`DD;getbid'[s];getask'[s];n?1000;n?1000));
-  h(".u.upd";`trade;(n#00:00+1?1440;s;n#2024.06.01+1?90;getprice'[s];n?1000));
-  h(".u.upd";`alerts;(n#.z.N;s;n?200000+950000;n?2.0+4.0;n?2.0+3.0));
-  h(".u.upd";`orders;(n#.z.N;s;n?`traderA`traderB`traderC`traderD;n?`clientA`clientB`clientC`clientD;n?order_types))
-  h(".u.upd";`data;(n#.z.N;s;n?`montclair`clifton`glenridge`bloomfield;n?`bulldogs`mustang`ridger`cardinal;n?`football`soccer`tennis`track;n?100))
+  h(".u.upd";`quote;(n#00:00:00.000000000+1?86400000000000;s;n?`AA`BB`CC`DD;getbid'[s];getask'[s];n?1000;n?1000));
+  h(".u.upd";`trade;(n#00:00:00.000000000+1?86400000000000;s;n#2024.07.01;getprice'[s];n?1000));
+  h(".u.upd";`alerts;(n#00:00:00.000000000+1?86400000000000;s;n?200000+950000;n?2.0+4.0;n?2.0+3.0));
+  h(".u.upd";`orders;(n#00:00:00.000000000+1?86400000000000;s;n?`traderA`traderB`traderC`traderD;n?`clientA`clientB`clientC`clientD;n?order_types))
+  h(".u.upd";`data;(n#00:00:00.000000000+1?86400000000000;s;n?`montclair`clifton`glenridge`bloomfield;n?`bulldogs`mustang`ridger`cardinal;n?`football`soccer`tennis`track;n?100))
   }
 
 /trigger timer every 100ms
-\t 300
+\t 10

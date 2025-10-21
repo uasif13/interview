@@ -29,7 +29,7 @@ if[not system"p";system"p 5010"]
 
 \l interview/tick/u.q
 \d .u
-ld:{if[not type key L::`$(-10_string L),string x;.[L;();:;()]];i::j::-11!(-2;L);if[0<=type i;-2 (string L)," is a corrupt log. Truncate to length ",(string last i)," and restart";exit 1];hopen L};
+ld:{if[not type key L::`$(-10_string L),string 2024.07.01;.[L;();:;()]];i::j::-11!(-2;L);if[0<=type i;-2 (string L)," is a corrupt log. Truncate to length ",(string last i)," and restart";exit 1];hopen L};
 tick:{init[];if[not min(`time`sym~2#key flip value@)each t;'`timesym];@[;`sym;`g#]each t;d::.z.D;if[l::count y;L::`$":",y,"/",x,10#".";l::ld d]};
 
 endofday:{end d;d+:1;if[l;hclose l;l::0(`.u.ld;d)]};
@@ -69,3 +69,6 @@ if[not system"t";system"t 1000";
 >q tick/r.q :5010 -p 5011	/rdb
 >q sym            -p 5012	/hdb
 >q tick/ssl.q sym :5010		/feed
+
+/interview
+q interview/tick.q sym interview/tick/ -p 5010
