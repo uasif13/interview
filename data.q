@@ -37,4 +37,6 @@ upd:upd_rt;
 / e.g. q2[]
 q6:{select sports!score by school, team from tdata}
 
-/q2[]
+/interview
+/q interview/data.q -p 5045
+/q6[]

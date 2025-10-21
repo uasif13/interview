@@ -39,4 +39,7 @@ upd:upd_rt;
 q3_exists:{select from talerts where size>1000000, variance > threshold}
 q3:{talerts:: delete from talerts where size > 1000000, variance > threshold}
 
-/q2[]
+/interview
+/q interview/alerts.q -p 5042
+/q3_exists[] -> check if there are any records with condition
+/q3[] -> deletes records that satisfy condition

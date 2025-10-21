@@ -21,3 +21,6 @@ upd:insert;
 
 / connect to ticker plant for (schema;(logcount;log))
 .u.rep .(hopen `$":",.u.x 0)"(.u.sub[`;`];`.u `i`L)";
+
+/interview
+/q interview/tick/r.q :5010 -p 5011

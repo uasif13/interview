@@ -36,9 +36,10 @@ replay:{[x]
 replay h"(.u.sub[`quote;",(.Q.s1 s),"];.u `i`L)";
 upd:upd_rt;
 
-/ client function to retrieve vwap
+/ client function to retrieve msize
 / e.g. getVWAP[`IBM.N`MSFT.O]
 q5:{select from (update masize:max asize by company from tquotes) where masize = asize}
-/q1:{select avg price,  vwap:price wavg size from ttrades by sym}
 
-/q1[]
+/interview
+/q interview/quotes.q -p 5043
+/q5[]

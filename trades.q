@@ -41,5 +41,8 @@ q1:{select avg price,  vwap:size wavg price by sym from ttrades}
 q2:{update shareval: price*size from ttrades where not (null price) | (null size)}
 /q1:{select avg price,  vwap:price wavg size from ttrades by sym}
 
-/q interview/trades.q -p PORT
+
+/interview
+/q interview/trades.q -p 5041
 /q1[]
+/q2[]

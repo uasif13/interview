@@ -37,4 +37,6 @@ upd:upd_rt;
 / e.g. q2[]
 q4:{exec trader, clientname from torders where order_type like "executed"}
 
-/q2[]
+/interview
+/q interview/orders.q -p 5044
+/q4[]
